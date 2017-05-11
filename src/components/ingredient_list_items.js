@@ -17,7 +17,7 @@ class IngredientListItems extends React.Component {
 
   render() {
     return (
-      <article className="card" style={"width: 20rem;"} onClick={this.handleClick}>
+      <article className="card" onClick={this.handleClick}>
         <img className="card-img-top img-responsive" src={`./public/images/${this.props.image}`} />
         <div className="card-block">
           <h4 className="card-title">{this.props.name}</h4>
