@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import RecipeListItems from './ingredient_list_items'
+import RecipeListItems from './recipe_list_items'
 import './recipe_list.css';
 
 class RecipeList extends Component {
+
   render() {
     return (
       <div>
