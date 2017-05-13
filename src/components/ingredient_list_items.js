@@ -1,4 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { Card, Image } from 'semantic-ui-react'
+
+
 
 class IngredientListItems extends React.Component {
   constructor(props) {
@@ -17,13 +20,15 @@ class IngredientListItems extends React.Component {
 
   render() {
     return (
-      <article className="card" onClick={this.handleClick}>
-        <img className="card-img-top img-responsive" src={`./public/images/${this.props.image}`} />
-        <div className="card-block">
-          <h4 className="card-title">{this.props.name}</h4>
-          <p>{this.state.isToggleOn ? 'Selected' : 'Non selected' }</p>
-        </div>
-      </article>
+      <Card onClick={this.handleClick} color='grey'>
+        <Image src={`/public/images/${this.props.image}`} />
+        <Card.Content>
+          <Card.Description>
+            <p>{this.state.isToggleOn ? 'Selected' : 'Non selected' }</p>
+            <p>{this.props.name}</p>
+          </Card.Description>
+        </Card.Content>
+      </Card>
     );
   }
 }

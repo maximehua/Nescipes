@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import { Grid } from 'semantic-ui-react';
+// import '../style/semantic/src/semantic.js';
 // import YTSearch from 'youtube-api-search';
 // import SearchBar from './components/search_bar';
 // import VideoList from './components/video_list';
@@ -32,14 +34,14 @@ class App extends Component {
       //   <VideoDetail />
       //   <VideoList videos={this.state.videos} />
       // </div>
-      <div>
-        <div className="col-md-8">
+      <Grid className="body">
+        <Grid.Column width={12}>
           <IngredientList />
-        </div>
-        <div className="col-md-4">
+        </Grid.Column>
+        <Grid.Column className="sidebar" width={4}>
           <RecipeList />
-        </div>
-      </div>
+        </Grid.Column>
+      </Grid>
     );
   }
 }

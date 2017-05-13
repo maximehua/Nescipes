@@ -1,19 +1,20 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { Card, Image } from 'semantic-ui-react'
 
 class RecipeListItems extends React.Component {
-  constructor(props) {
-      super(props);
-  }
-
   render() {
     return (
-      <article className="card">
-        <img className="card-img-top img-responsive" src={`./public/images/${this.props.image}`} />
-        <div className="card-block">
-          <h4 className="card-title">{this.props.name}</h4>
-          <p className="card-text">{this.props.description}</p>
-        </div>
-      </article>
+      <Card>
+        <Image src={`./public/images/${this.props.image}`} />
+        <Card.Content>
+          <Card.Header>
+            {this.props.name}
+          </Card.Header>
+          <Card.Description>
+            {this.props.description}
+          </Card.Description>
+        </Card.Content>
+      </Card>
     );
   }
 }

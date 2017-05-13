@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
-import RecipeListItems from './recipe_list_items'
+import { Card, Header } from 'semantic-ui-react';
+import RecipeListItems from './recipe_list_items';
 import './recipe_list.css';
 
 class RecipeList extends Component {
 
   render() {
     return (
-      <div>
-        <h4>Suggested Recipes</h4>
-        <div className="card-group">
+      <div className="RecipeList">
+        <Header as="h3">Suggested Recipes</Header>
+        <Card.Group>
           <RecipeListItems image="salmon.png" />
-        </div>
+          <RecipeListItems image="poulet-roti.png" />
+        </Card.Group>
       </div>
     );
   }
